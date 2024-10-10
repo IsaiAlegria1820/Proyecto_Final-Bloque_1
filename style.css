@@ -3,6 +3,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-image: url('img/fondo.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
   }
   
   header {
@@ -10,6 +15,67 @@ body {
     color: #fff;
     padding: 1em;
     text-align: center;
+  }
+  nav {
+    position: fixed;
+    top: 0; 
+    width: 100%; 
+    background-color: #333; 
+    color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  }
+  
+  nav ul {
+    list-style: none; /* Eliminar los puntos de la lista */
+    margin: 0;
+    padding: 0; 
+    display: flex; /* Desplegar los elementos de la lista en una fila */
+    justify-content: space-between; /* Espaciar los elementos de la lista de manera uniforme */
+  }
+  
+  nav ul li {
+    position: relative; /* Establecer la posición relativa de los elementos de la lista */
+  }
+  
+  nav ul li a {
+    color: #fff; /* Establecer el color del texto de los enlaces */
+    text-decoration: none; /* Eliminar la decoración de los enlaces */
+    padding: 10px; /* Agregar un poco de espacio entre los enlaces y el contenido */
+    transition: background-color 0.2s ease; /* Agregar una transición al cambio de color de fondo de los enlaces */
+  }
+  
+  nav ul li a:hover {
+    background-color: #555; /* Cambiar el color de fondo de los enlaces al pasar el mouse por encima */
+  }
+  
+  nav ul li ol {
+    display: none; /* Ocultar la lista de elementos secundarios */
+    position: absolute; /* Establecer la posición absoluta de la lista de elementos secundarios */
+    top: 100%; /* Posicionar la lista de elementos secundarios debajo del elemento principal */
+    left: 0; /* Posicionar la lista de elementos secundarios a la izquierda del elemento principal */
+    background-color: #333f; /* Establecer el color de fondo de la lista de elementos secundarios */
+    padding: 10px; /* Agregar un poco de espacio entre la lista de elementos secundarios y el contenido */
+    border: 1px solid #444; /* Agregar un borde a la lista de elementos secundarios */
+  }
+  
+  nav ul li:hover ol {
+    display: block; /* Mostrar la lista de elementos secundarios al pasar el mouse por encima del elemento principal */
+  }
+  
+  nav ul li ol li {
+    margin-bottom: 10px; /* Agregar un poco de espacio entre los elementos de la lista secundaria */
+  }
+  
+  nav ul li ol li a {
+    color: #fff; /* Establecer el color del texto de los enlaces secundarios */
+    text-decoration: none; /* Eliminar la decoración de los enlaces secundarios */
+    padding: 10px; /* Agregar un poco de espacio entre los enlaces secundarios y el contenido */
+    transition: background-color 0.2s ease; /* Agregar una transición al cambio de color de fondo de los enlaces secundarios */
+  }
+  
+  nav ul li ol li a:hover {
+    background-color: #555; /* Cambiar el color de fondo de los enlaces secundarios al pasar el mouse por encima */
   }
   
   main {
@@ -25,7 +91,9 @@ body {
     margin-bottom: 1em;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
-  
+  h2{
+    text-align: center;
+  }
   .personajes-container {
     text-align: center;
   }
@@ -62,6 +130,10 @@ body {
   
   /* Pantallas pequeñas (celulares) */
   @media (max-width: 480px) {
+    body {
+      background-size: 100% auto;
+      background-position: top center;
+    }
     main {
       padding: 1em;
     }
@@ -81,6 +153,11 @@ body {
   
   /* Pantallas medianas (tabletas) */
   @media (min-width: 481px) and (max-width: 768px) {
+    body {
+      background-size: 100% auto;
+      background-position: top center;
+    }
+
     main {
       padding: 1.5em;
     }
@@ -100,6 +177,9 @@ body {
   
   /* Pantallas grandes (ordenadores) */
   @media (min-width: 769px) {
+    body {
+      background-size: 100% auto;
+    }
     main {
       padding: 2em;
     }
