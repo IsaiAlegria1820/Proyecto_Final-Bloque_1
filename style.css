@@ -27,16 +27,30 @@ body {
   }
   
   .personajes-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    text-align: center;
   }
+  .personajes-container h3 {
+  
+    margin: 0; 
+    padding: 10px 0; 
+  }
+  .personajes-container img {
+    margin: 20px auto; 
+    display: block;
+  }
+  .personajes-container p {
+    text-align: justify; 
+    margin: 20px auto; 
+    width: 80%; 
+  }
+
   
   .personaje {
     width: 200px;
     height: 200px;
     margin: 1em;
     border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
   }
   
